@@ -32,7 +32,7 @@ Behaviors to note:
     - The `background-color` of the "Waiting on" section should be `lightgoldenrodyellow`.
 - The "Received" section should be contained within a `<div>` that has the class `"received"`.
     - The `background-color` of the "Received" section should be `lightgreen`.
-- For items in the "Waiting on" section, the date that the delivery was expected on is displayed. If the date is more than **3** days ago, the color of the date is `darkred`.
+- For items in the "Waiting on" section, the date that the delivery was expected on is displayed. If the date is more than **3** days ago, the color of the date is `red`.
 
 Other notes:
 
@@ -88,6 +88,6 @@ All other implementation details are up to you.
 
 <li>The home page displays the message, "Added to list", after logging a delivery </li>
 
-<li>The text of the expected arrival date is darkred when the date is more than 3 days ago </li>
+<li>The text of the expected arrival date is red when the date is more than 3 days ago </li>
 
 </details>
