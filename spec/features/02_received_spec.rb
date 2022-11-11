@@ -150,7 +150,7 @@ describe "The home page" do
 end
 
 describe "The text of the expected arrival date" do
-  it "is red when the date is more than 3 days ago", points: 1, js: true do
+  it "is red when the date is more than 3 days ago", points: 0, js: true do
     visit("/user_sign_in")
     user_jacob = User.new
     user_jacob.email = "jacob_#{rand(100)}@example.com"
