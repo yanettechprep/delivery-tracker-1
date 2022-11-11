@@ -20,6 +20,7 @@ Behaviors to note:
 - The home page has a list of deliveries that you're expecting.
 - There are two sections on the home page: "Waiting on" and "Received".
 - You can log a new delivery using the form at the top of the page. Once added, it appears in the "Waiting on" section.
+- You must provide a description and a date that the package is expected to arrive on, or the entry is not accepted.
 - For items in the "Waiting on" section, there is a button that, when clicked, moves the item to the "Received" section.
 - For items in the "Received" section, there is a link to delete the item.
 
