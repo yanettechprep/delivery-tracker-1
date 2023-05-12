@@ -47,10 +47,36 @@
 <hr>
 <div class="waiting_on">
   <h2>Waiting on</h2>
+  <ul>
+  <% @list_of_deliveries.each do |delivery|%>
+  <% if delivery.status == "waiting_on"%>
+  <li>
+  <div><%=delivery.descrition%></div>
+  <%expected_date = delivery.arrive_on%>
+  <% if expected_date < 3.day.ago%>
+  <div style="color:red">Supposed to arrive on <%=delivery.arrive_on_to_s%></div>
+  <%else%>
+  <div style="color:black">Suppossed to arrive on <%=delivery.arrive_on_to_s%></div>
+<%end%>
+<% if delivery.details != nil%>
+<div><%=delivery.details%></div>
+<%end%>
+<form action="/modify_delivery/<%=delivery.id%>" method="post">
+  <input type="hidden" name="query_status" value="received">
 
+  <button>Mark as received</button>
+  </form>
+  </li>
+  <%end%>
+  <%end%>
+  </ul>
+  </div>
   <hr>
 
   <div class="received">
   <h2>Received</h2>
+  <ul>
+  <%
+
 
 <hr>

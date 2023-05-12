@@ -10,11 +10,11 @@ class DeliveriesController < ApplicationController
  
   def create
     the_delivery = Delivery.new
-    the_delivery.description = params.fetch("query_description")
+    the_delivery.description = params.fetch("description")
     the_delivery.status = params.fetch("query_status")
-    the_delivery.user_id = params.fetch("query_user_id")
-    the_delivery.details = params.fetch("query_details")
-    the_delivery.arrive_on = params.fetch("query_arrive_on")
+    the_delivery.user_id = session.fetch(:user_id)
+    the_delivery.details = params.fetch("details")
+    the_delivery.arrive_on = params.fetch("arrive_on")
     the_delivery.save
       
       redirect_to("/", { :alert => "Added to the list" })
